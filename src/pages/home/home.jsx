@@ -29,21 +29,26 @@ function Home() {
     }
 
     return (
-        <div>
+        <div className="homePage">
             <Navigationbar/>
-            <img
-                src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyk4WNsT-h5vXlay4iSgtFDTE_pXkz9mvFbQ&usqp=CAU'
-                width='100%' alt='Header'/>
+            <div>
+                <img
+                    src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyk4WNsT-h5vXlay4iSgtFDTE_pXkz9mvFbQ&usqp=CAU'
+                    width='100%' alt='Header'/>
+            </div>
+
             <br/>
 
-            {/*</CardGroup>*/}
+            <div style={{display:"flex",flexWrap:'wrap',justifyContent:"space-evenly"}}>
                 {images.map(image => {
                     return (
-                        <img src={image.download_url} className="images" alt={image.id} style={{maxWidth:"30rem",maxHeight:"40rem"}}/>
+                        <img src={image.download_url} className="images" alt={image.id}/>
                     )
                 })}
+            </div>
 
-            <Pagination>
+
+            <Pagination  style={{alignSelf:"center"}}>
                 {page > 1 && <Pagination.Prev onClick={handlePageDesc}/>}
                 {page > 1 && <Pagination.Ellipsis/>}
                 <Pagination.Item active>{page}</Pagination.Item>

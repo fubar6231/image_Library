@@ -1,3 +1,12 @@
-.images{
+.homePage {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.images {
     padding: 1rem;
+    max-height: 50rem;
+    max-width: 40rem;
 }
