@@ -9,4 +9,8 @@
     padding: 1rem;
     max-height: 50rem;
     max-width: 40rem;
+    
+    @media screen and (max-width: 600px)  {
+        width: 100%;
+    }
 }
